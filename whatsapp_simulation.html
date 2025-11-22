@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Hacking Tool - Simulation Only</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .header {
+            background-color: #075e54;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #3d9c43;
+        }
+        .data-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 4px;
+        }
+        .data-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .data-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>WhatsApp Hacking Tool - Simulation Only</h1>
+            <p>This is a simulation tool for educational purposes only.</p>
+        </div>
+        <div class="content">
+            <div class="button-container">
+                <button class="button" id="fetch-messages">Fetch Messages</button>
+                <button class="button" id="fetch-contacts">Fetch Contacts</button>
+                <button class="button" id="fetch-media">Fetch Media</button>
+            </div>
+            <div class="data-container">
+                <h2 class="data-title">Data:</h2>
+                <pre id="data-output"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample JSON datasets
+        const messages = [
+            { id: 1, sender: "John Doe", message: "Hello, how are you?" },
+            { id: 2, sender: "Jane Smith", message: "I'm good, thanks!" },
+            { id: 3, sender: "John Doe", message: "What about you?" },
+        ];
+
+        const contacts = [
+            { id: 1, name: "John Doe", phone: "+1234567890" },
+            { id: 2, name: "Jane Smith", phone: "+0987654321" },
+            { id: 3, name: "Alice Johnson", phone: "+1122334455" },
+        ];
+
+        const media = [
+            { id: 1, type: "image", url: "https://example.com/image.jpg" },
+            { id: 2, type: "video", url: "https://example.com/video.mp4" },
+            { id: 3, type: "audio", url: "https://example.com/audio.mp3" },
+        ];
+
+        // Event listeners for button clicks
+        document.getElementById("fetch-messages").addEventListener("click", () => {
+            displayData(messages);
+        });
+
+        document.getElementById("fetch-contacts").addEventListener("click", () => {
+            displayData(contacts);
+        });
+
+        document.getElementById("fetch-media").addEventListener("click", () => {
+            displayData(media);
+        });
+
+        // Function to display data in the output container
+        function displayData(data) {
+            const outputContainer = document.getElementById("data-output");
+            outputContainer.textContent = JSON.stringify(data, null, 2);
+        }
+    </script>
+</body>
+              </html>
